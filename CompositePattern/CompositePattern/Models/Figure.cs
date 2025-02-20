@@ -12,7 +12,7 @@ namespace CompositePattern.Models
 
         public override void Show()
         {
-            Console.WriteLine($"Reference of this figuer: {Reference}");
+            Console.WriteLine($"Reference of this figure: {Reference}");
         }
     }
 }
