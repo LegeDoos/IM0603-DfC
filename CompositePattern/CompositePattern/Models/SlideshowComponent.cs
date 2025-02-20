@@ -11,7 +11,7 @@ namespace CompositePattern.Models
 
         public abstract void Show();
 
-        public void AddPart()
+        public virtual void AddPart()
         {
             // todo implemenent
         }
