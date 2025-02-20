@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompositePattern.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,17 @@ namespace CompositePattern.Models
 {
     internal class Slideshow : SlideshowComposite
     {
-        public override void AddPart()
+        public override void AddPart(SlideshowComponent child)
         {
-            // todo only add slides here
-
-            base.AddPart();
+            // only add slides here
+            if (child is Slide)
+            {
+                base.AddPart(child);
+            }
+            else
+            {
+                throw new InvalidItemException();
+            }
         }
 
         public override void Show()

@@ -8,11 +8,18 @@ namespace CompositePattern.Models
 {
     internal class Item : SlideshowComposite
     {
-        public override void AddPart()
+        public override void AddPart(SlideshowComponent child)
         {
-            // todo only add text, figure or list here
+            // only add text, figure or list here
 
-            base.AddPart();
+            if (child is Text || child is Figure || child is List)
+            {
+                base.AddPart(child);
+            }
+            else
+            {
+                throw new Exception("Invalid child to add!");
+            }
         }
 
         public override void Show()
