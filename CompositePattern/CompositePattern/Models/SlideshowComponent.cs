@@ -10,7 +10,7 @@ namespace CompositePattern.Models
     internal abstract class SlideshowComponent
     {
         public SlideshowComponent? Parent { get; set; }
-        private List<SlideshowComponent>? children;
+        protected List<SlideshowComponent>? children;
 
         public abstract void Show();
 

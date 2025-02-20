@@ -10,14 +10,29 @@ namespace CompositePattern.Models
     {
         public override void AddPart(SlideshowComponent child)
         {
-            // todo only add items here
-
-            base.AddPart(child);
+            // only add items here
+            if (child is Item)
+            {
+                base.AddPart(child);
+            }
+            else
+            {
+                throw new Exception("Invalid child to add!");
+            }
         }
 
         public override void Show()
         {
-            // todo show children
+            Console.WriteLine("This is the list level");
+
+            // only show children
+            if (children != null)
+            {
+                foreach (var child in children)
+                {
+                    child.Show();
+                }
+            }
         }
     }
 }

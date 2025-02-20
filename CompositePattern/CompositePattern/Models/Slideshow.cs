@@ -24,7 +24,16 @@ namespace CompositePattern.Models
 
         public override void Show()
         {
-            // todo show children
+            Console.WriteLine("This is the slideshow level");
+
+            // only show children
+            if (children != null)
+            {
+                foreach (var child in children)
+                {
+                    child.Show();
+                }
+            }
         }
     }
 }
