@@ -22,7 +22,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
+      <x>830</x>
       <y>280</y>
       <w>190</w>
       <h>110</h>
@@ -38,7 +38,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>760</x>
+      <x>900</x>
       <y>490</y>
       <w>160</w>
       <h>130</h>
@@ -57,16 +57,16 @@ theText: string
     <coordinates>
       <x>610</x>
       <y>190</y>
-      <w>190</w>
+      <w>330</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;170.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;310.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>790</x>
+      <x>930</x>
       <y>380</y>
       <w>100</w>
       <h>130</h>
@@ -155,7 +155,7 @@ theText: string
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>940</x>
+      <x>1080</x>
       <y>490</y>
       <w>150</w>
       <h>130</h>
@@ -181,7 +181,7 @@ theText: string
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
+      <x>970</x>
       <y>380</y>
       <w>220</w>
       <h>130</h>
@@ -250,5 +250,33 @@ m1=</panel_attributes>
 +AddPart()
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>490</y>
+      <w>140</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Table
+-
+
+-
++Show()
++AddPart()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>380</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;110.0</additional_attributes>
   </element>
 </diagram>
