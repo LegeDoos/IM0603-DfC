@@ -14,6 +14,8 @@ namespace BridgePattern
             myList.Insert(pos, "dit is 1");
             pos = myList.Size();
             myList.Insert(pos, "dit is 2");
+            pos = myList.Size();
+            myList.Insert(pos, "dit is 3");
 
             pos = myList.Size();
             for (int i = 0; i < pos; i++)
@@ -21,6 +23,14 @@ namespace BridgePattern
                 Console.WriteLine($"{myList.ElementAtPos(i)}");
             }
 
+            Console.WriteLine();
+
+            myList.Remove(1);
+            pos = myList.Size();
+            for (int i = 0; i < pos; i++)
+            {
+                Console.WriteLine($"{myList.ElementAtPos(i)}");
+            }
 
         }
     }

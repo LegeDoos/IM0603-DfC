@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -70,7 +71,39 @@ namespace BridgePattern.Models
 
         public void Remove(int pos)
         {
-            throw new NotImplementedException();
+            int s = Size();
+            if (s <= pos)
+            {
+                throw new Exception("Out of range");
+            }
+            if (firstNode == null)
+            {
+                throw new Exception("Not initialized");
+            }
+            else
+            {
+                if (pos == 0)
+                {
+                    // delete first
+                    firstNode = firstNode.Next;
+                }
+                else
+                {
+                    var node = firstNode;
+                    for (int i = 0; i < pos-1; i++)
+                    {
+                        node = node.Next;
+                    }
+                    if (node != null)
+                    {
+                        // remove the node
+                        if (node.Next != null)
+                        {
+                            node.Next = node.Next.Next;
+                        }
+                    }
+                }
+            }
         }
 
         public int Size()
